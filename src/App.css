@@ -1,0 +1,371 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.app {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #e8e8e8;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+button:hover {
+    border-color: #888;
+    transform: scale(1.1);
+}
+
+.add-btn {
+    border-color: green;
+    color: green;
+}
+
+.remove-btn {
+    border-color: red;
+    color: red;
+}
+
+/* Assignment List Styles */
+.assignment-list {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #fff;
+}
+
+/* Header Row */
+.assignment-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    font-weight: bold;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+/* Assignment Card */
+.assignment-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.assignment-card.red {
+    background-color: #f28b82; /* Past due */
+}
+
+.assignment-card.green {
+    background-color: #81c995; /* Completed */
+}
+
+.assignment-card.yellow {
+    background-color: #fdd663; /* Due in 7 days */
+}
+
+.assignment-card.blue {
+    background-color: #a0c4ff; /* Due later */
+}
+
+/* Progress Indicator Styles */
+.progress-indicator {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.progress-bar {
+    background: #eee;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 100%;
+    height: 20px;
+    margin-top: 10px;
+}
+
+.progress-fill {
+    height: 20px;
+    background: #4caf50;
+    transition: width 0.3s;
+}
+
+/* Scrollable List Styles */
+.assignment-list::-webkit-scrollbar {
+    width: 10px;
+}
+
+.assignment-list::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 5px;
+}
+
+.assignment-list::-webkit-scrollbar-thumb:hover {
+    background: #aaa;
+}
+
+/* Modal Buttons */
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.modal-buttons button {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Save/Create Button */
+.save-btn {
+    background-color: #4caf50;
+    color: white;
+    flex: 1; /* Make buttons equally sized */
+}
+
+.save-btn:hover {
+    background-color: #45a049;
+}
+
+/* Toggle Status Button */
+.toggle-status-btn {
+    background-color: #f44336;
+    color: white;
+    flex: 1; /* Make buttons equally sized */
+}
+
+.toggle-status-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: red;
+}
+
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    width: 400px;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.modal-content h3 {
+    margin-top: 0;
+    font-size: 18px;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-content input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.modal-buttons button {
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.modal-buttons .save-btn {
+    background-color: #4caf50;
+    color: white;
+}
+
+.modal-buttons .save-btn:hover {
+    background-color: #45a049;
+}
+
+.modal-buttons .toggle-status-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.modal-buttons .toggle-status-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: red;
+}
+
+/* App Background for Delete Mode */
+.delete-mode-active {
+    background-color: #ffdddd;
+    transition: background-color 0.3s;
+}
+
+/* Delete Class Container */
+.delete-class-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    gap: 10px;
+}
+
+.delete-class-container select {
+    flex: 1;
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.delete-class-container .delete-class-btn {
+    flex: 0 0 120px;
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+}
+
+.delete-class-container .delete-class-btn:hover {
+    background-color: #d33;
+}
+
+/* Header and Row Containers */
+.assignment-header,
+.assignment-card {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr auto; /* Adjust column widths */
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+}
+
+/* Header Styling */
+.assignment-header {
+    font-weight: bold;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+/* Assignment Rows */
+.assignment-card {
+    background-color: #fff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
