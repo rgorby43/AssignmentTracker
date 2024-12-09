@@ -93,11 +93,12 @@ button:hover {
     margin: 5px 0;
     border-radius: 5px;
     font-size: 14px;
-    color: #fff;
+    color: #000000;
+    font-weight: bold;
 }
 
 .assignment-card.red {
-    background-color: #f28b82; /* Past due */
+    background-color: #ed9e95; /* Past due */
 }
 
 .assignment-card.green {
@@ -368,4 +369,22 @@ button:hover {
     display: flex;
     justify-content: center;
     gap: 5px;
+}
+/* Logout Button Styling */
+.user-info .logout-button {
+    background: none; /* No background */
+    border: none; /* No border */
+    font-size: 20px; /* Icon size */
+    cursor: pointer;
+    color: #555; /* Default color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, color 0.3s ease;
+    padding: 5px;
+}
+
+.user-info .logout-button:hover {
+    transform: scale(1.2); /* Slight zoom effect */
+    color: #007BFF; /* Change color on hover */
 }

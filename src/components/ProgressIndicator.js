@@ -7,7 +7,6 @@ const ProgressIndicator = ({ assignments }) => {
 
     return (
         <div className="progress-indicator">
-            <h3>Progress</h3>
             <p>{completed} of {total} assignments completed ({percentage}%)</p>
             <div className="progress-bar">
                 <div
